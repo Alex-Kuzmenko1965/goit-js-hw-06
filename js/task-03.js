@@ -32,21 +32,3 @@ const allGalleryEl = images.map(({url, alt}) => {
 }).join('');
 
 galleryEl.insertAdjacentHTML('afterbegin', allGalleryEl);
-
-// const allLiEl = [];
-
-// images.forEach((name, index) => {
-//   const liEl = document.createElement('li');
-//   console.log(liEl); 
-//   const imgEl = document.createElement('img');
-//   console.log(imgEl);
-  
-//   imgEl.src = `${ name.url }`;
-//   imgEl.alt = `${name.alt}`;
-//   imgEl.style = 'width:auto; height: 180px';   
-//   liEl.insertAdjacentElement('afterbegin', imgEl);  
-//   allLiEl.push(liEl);
-// });
-
-// galleryEl.append(...allLiEl);
-// console.log(galleryEl);

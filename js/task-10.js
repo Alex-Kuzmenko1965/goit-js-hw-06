@@ -10,7 +10,7 @@ const createEl = controlsEl.children[1];
 const destroyEl = controlsEl.children[2];
 const divBoxesEl = document.querySelector('div[id="boxes"]');
 
-let amount = numberEl.value;
+const fragment = document.createDocumentFragment();
 
 createEl.addEventListener('click', createBoxes);
 
@@ -25,19 +25,15 @@ function createBoxes(amount) {
     console.log(divSize);
     divEl.style = `width: ${divSize}px; height: ${divSize}px; background-color: ${getRandomHexColor()}`; 
     console.log(divEl);
-    divBoxesEl.append(divEl);  
+    fragment.append(divEl);  
     console.log(divEl, amount);
   }
+  divBoxesEl.append(fragment);
 };
 
 function destroyBoxes() {
-  amount = numberEl.value;
-  for (let i = 1; i <= amount; i += 1) {
-    const addedDivBoxes = document.querySelector('.added');
-    addedDivBoxes.remove();
-    numberEl.value -= 1;
-    console.log(addedDivBoxes, numberEl.value);
-  }
+  numberEl.value = 0;
+  divBoxesEl.innerHTML = '';  
 };
 
 function getRandomHexColor() {

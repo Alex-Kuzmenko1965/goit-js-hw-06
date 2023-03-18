@@ -12,7 +12,7 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const linkElement = document.querySelector('ul#ingredients');
+const linkElement = document.getElementById('ingredients');
 const allLiEl = [];
 
 ingredients.forEach((name, index) => {
