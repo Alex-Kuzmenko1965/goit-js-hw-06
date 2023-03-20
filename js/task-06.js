@@ -4,8 +4,6 @@
 // Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 const inputEvent = document.getElementById('validation-input');
 // console.log(inputEvent);
-const validEl = document.querySelector('style');
-// console.log(validEl);
 
 // inputEvent.addEventListener('focus', () => {
 //   console.log('focus');  
