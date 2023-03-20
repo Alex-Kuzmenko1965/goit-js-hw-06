@@ -13,8 +13,8 @@ const validEl = document.querySelector('style');
 
 inputEvent.addEventListener('blur', (event) => {
   event.preventDefault()
-  // console.log(event.currentTarget.value.length, Number(inputEvent.dataset.length));
-  if (event.currentTarget.value.length > inputEvent.dataset.length)
+  
+  if (event.currentTarget.value.length === Number(inputEvent.dataset.length))
     {
       inputEvent.classList.remove('invalid');
       inputEvent.classList.add('valid');      
