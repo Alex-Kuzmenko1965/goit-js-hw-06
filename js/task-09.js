@@ -3,9 +3,6 @@
 const changeColorBtn = document.querySelector('.change-color');
 // console.log(changeColorBtn);
 
-const fonColor = document.querySelector('.widget');
-// console.log(fonColor);
-
 const valueColor = document.querySelector('span.color');
 // console.log(valueColor);
 
