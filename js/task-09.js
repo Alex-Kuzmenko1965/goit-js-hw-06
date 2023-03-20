@@ -1,18 +1,18 @@
 // Напиши скрипт, який змінює кольори фону елемента <body> через інлайн-стиль по кліку на button.change-color і виводить значення кольору в span.color.
 // Для генерування випадкового кольору використовуй функцію getRandomHexColor.
 const changeColorBtn = document.querySelector('.change-color');
-console.log(changeColorBtn);
+// console.log(changeColorBtn);
 
 const fonColor = document.querySelector('.widget');
-console.log(fonColor);
+// console.log(fonColor);
 
 const valueColor = document.querySelector('span.color');
-console.log(valueColor);
+// console.log(valueColor);
 
 
 changeColorBtn.addEventListener('click', event => {  
-  fonColor.style.backgroundColor = valueColor.textContent = getRandomHexColor();
-  console.log(valueColor.textContent);
+  document.body.style.backgroundColor = valueColor.textContent = getRandomHexColor();
+  // console.log(valueColor.textContent);
 });
 
 function getRandomHexColor() {

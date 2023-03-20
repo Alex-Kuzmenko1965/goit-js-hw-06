@@ -3,9 +3,9 @@
 // Якщо введена правильна кількість символів, то border інпуту стає зеленим, якщо неправильна кількість - червоним.
 // Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 const inputEvent = document.getElementById('validation-input');
-console.log(inputEvent);
+// console.log(inputEvent);
 const validEl = document.querySelector('style');
-console.log(validEl);
+// console.log(validEl);
 
 // inputEvent.addEventListener('focus', () => {
 //   console.log('focus');  
@@ -13,16 +13,14 @@ console.log(validEl);
 
 inputEvent.addEventListener('blur', (event) => {
   event.preventDefault()
-  
+  // console.log(event.currentTarget.value.length, Number(inputEvent.dataset.length));
   if (event.currentTarget.value.length > inputEvent.dataset.length)
     {
-      // строки 20 та 24 у мене чомусь не спрацьовують
-      inputEvent.setAttribute('id', 'validation-input.valid');      
-      // inputEvent.style = 'border-color: #4caf50;'; 
-      console.log('blur', inputEvent);
+      inputEvent.classList.remove('invalid');
+      inputEvent.classList.add('valid');      
     } else {
-      inputEvent.setAttribute('id', 'validation-input.invalid');
-      // inputEvent.style = 'border-color: #f44336;'; 
-      console.log('blur', inputEvent);
-    }  
+      inputEvent.classList.remove('valid');
+      inputEvent.classList.add('invalid');      
+    }
+    console.log(inputEvent);  
 });
